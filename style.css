@@ -5,3 +5,9 @@ Author URI: https://www.devrubel.com
 Tags: italy food, resturent website, restuarent theme, 
 Version:1.0
 Text Domain: zitalyfood */
+
+article .single-post img{
+	max-width: 100%;
+	float: none;
+	width: 100%;
+}
