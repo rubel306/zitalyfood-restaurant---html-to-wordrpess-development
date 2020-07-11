@@ -15,12 +15,12 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="<?php	echo get_theme_file_uri(); ?>/assets/css/zerogrid.css"> 
+  <!-- 	<link rel="stylesheet" href="<?php	echo get_theme_file_uri(); ?>/assets/css/zerogrid.css"> 
 	<link rel="stylesheet" href="<?php	echo get_theme_file_uri(); ?>/assets/css/style.css">
 	<link rel="stylesheet" href="<?php	echo get_theme_file_uri(); ?>/assets/css/slide.css">
-	<link rel="stylesheet" href="<?php	echo get_theme_file_uri(); ?>/assets/css/menu.css">
+	<link rel="stylesheet" href="<?php	echo get_theme_file_uri(); ?>/assets/css/menu.css"> -->
 	<!-- Custom Fonts -->
-    <link href="<?php	echo get_theme_file_uri(); ?>/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="<?php	echo get_theme_file_uri(); ?>/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
          <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">

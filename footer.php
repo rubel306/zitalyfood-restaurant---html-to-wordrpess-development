@@ -43,9 +43,6 @@
 </footer>
 
 
-	<!-- js -->
-	<script src="js/classie.js"></script>
-	<script src="js/demo.js"></script>
 	
 </div>
 <?php wp_footer(); ?>
