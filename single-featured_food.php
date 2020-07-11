@@ -1,0 +1,1 @@
+single featured post. 

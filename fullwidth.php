@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+
+/*
+	Template Name: Full width / no sidebar
+*/
+
+
+
+get_header(); ?>
 
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
@@ -9,7 +17,7 @@
 				<li><a href="archive.html">Blog</a></li>
 			</ul>
 		</div>
-		<div id="main-content" class="col-2-3">
+		<div id="main-content" class="col-3-3">
 			<div class="wrap-content">
 
 				<?php while(have_posts()): the_post(); ?>
@@ -21,9 +29,6 @@
 
 
 			</div>
-		</div>
-		<div id="sidebar" class="col-1-3">
-			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </section>

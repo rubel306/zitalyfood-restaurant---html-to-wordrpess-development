@@ -2,27 +2,27 @@
 	<div class="zerogrid">
 		<div class="callbacks_container">
 			<ul class="rslides" id="slider4">
+				<?php 
+
+					$sliderQuery	= new WP_Query(array(
+						'post_type'	=> 'slider'
+					));
+
+					while($sliderQuery->have_posts()):$sliderQuery->the_post();
+
+				 ?>
+
+
 				<li>
-					<img src="<?php echo get_theme_file_uri(); ?>/assets/images/banner1.jpg" alt="">
+					<?php the_post_thumbnail(); ?>
 					<div class="caption">
-						<h2>We've got the best spareribs in town.</h2></br>
-						<p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo,quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. </p>
+						<h2><?php the_title(); ?></h2></br>
+						<?php the_content(); ?>
 					</div>
 				</li>
-				<li>
-					<img src="<?php echo get_theme_file_uri(); ?>/assets/images/banner2.jpg" alt="">
-					<div class="caption">
-						<h2>If food is an experience, then you'll find it at the restaurant.</h2></br>
-						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					</div>
-				</li>
-				<li>
-					<img src="<?php echo get_theme_file_uri(); ?>/assets/images/banner3.jpg" alt="">
-					<div class="caption">
-						<h2>Enjoy our take-away menu.</h2></br>
-						<p>At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-					</div>
-				</li>
+
+			<?php endwhile; ?>
+
 			</ul>
 		</div>
 	</div>
@@ -49,68 +49,30 @@
 						<span>text text text text text</span>
 					</div>
 					<div class="row">
+
+						<?php 
+
+							$foods_query = new WP_Query(array(
+								'post_type'		=> 'featured_food', 
+								'order'			=>'ASC'
+							));
+							while($foods_query->have_posts()):$foods_query->the_post();
+
+
+						 ?>
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<div class="box-item">
-									<span class="ribbon">Menu Card<b></b></span>
-									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/menu.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
+									<span class="ribbon"><?php the_title(); ?><b></b></span>
+									<?php the_post_thumbnail( ); ?>
+									<p><?php echo wp_trim_words( get_the_content(), 30 , ' '); ?></p>
+									<a href="<?php echo get_the_permalink(); ?>" class="button button-1">Detail</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Fast Food<b></b></span>
-									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/fast-food.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Reservation<b></b></span>
-									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/reservation.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Chef<b></b></span>
-									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/chef.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Preview<b></b></span>
-									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/preview.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Text Heading<b></b></span>
-									<img src="<?php echo get_theme_file_uri(); ?>/assets/images/reservation.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
+					<?php endwhile; ?>
+
+
 					</div>
 				</div>
 			</div>
